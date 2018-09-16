@@ -1,0 +1,23 @@
+{
+  "name": "solar-poc",
+  "version": "1.0.0",
+  "description": "Multiple api in monorepo with lerna and yarn workspaces",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amitkumar1701/lerna-poc"
+  },
+  "author": "Amit Kumar",
+  "scripts": {
+    "docker:roofgraf": "lerna run --scope roofgraf docker ",
+    "dev:roofgraf": "lerna run --scope roofgraf dev",
+    "dev:solargraf": "lerna run --scope solargraf dev",
+    "start:roofgraf": "lerna run --scope roofgraf start",
+    "start:solargraf": "lerna run --scope solargraf start" 
+  },
+  "license": "ISC",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "devDependencies": {
+    "lerna": "^3.3.2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "Core helper functions that can be shared among apis",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amitkumar1701/sofdesk-poc"
+  },
+  "author": "Amit Kumar",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
