@@ -5,9 +5,6 @@ Make sure you have node version 8+ installed.
 ### Running the application
 
 There are a few ways to run this app:
-  - Everything in docker containers
-  - Local copy of api with helper containers (mysql, elasticsearch and redis)
-  - Local copy of everything you need
   
     #### 1. Running everything in docker containers
       ```bash
