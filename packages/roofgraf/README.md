@@ -2,14 +2,6 @@
 
 Make sure you have node version 8+ installed.
 
-## Getting Started
-
-Git clone this project:
-
-```bash
-$ git clone <repo>
-```
-
 ### Running the application
 
 There are a few ways to run this app:
@@ -19,11 +11,11 @@ There are a few ways to run this app:
   
     #### 1. Running everything in docker containers
       ```bash
-      $ npm run docker
+      $ yarn docker
       ```
       If pressing ctrl-c doesn't exit the containers, you can stop them by
       ```bash
-      $ npm run docker-stop
+      $ yarn docker-stop
       ```
   
     #### 2. Running everything locally
@@ -32,8 +24,8 @@ There are a few ways to run this app:
       - Ensure config points to the right hostnames + ports for each of these services
       - Run
       ```bash
-      $ npm install 
-      $ DEBUG=* npm run dev
+      $  yarn install 
+      $ DEBUG=* yarn dev
       ```
 
 ### Checking out available routes

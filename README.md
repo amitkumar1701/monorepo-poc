@@ -1,6 +1,14 @@
 # sofdesk-services
 
-Test for put organize services under monorepo
+Test to organize services under monorepo
+
+## Getting Started
+
+Git clone this project:
+
+```bash
+$ git clone <repo>
+```
 
 ### Running the app
 ```

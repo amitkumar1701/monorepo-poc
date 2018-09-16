@@ -15,12 +15,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:amitkumar1701/lerna-poc.git"
+    "url": "git@github.com:skrunchtech/monorepo-poc.git"
   },
   "author": "Amit Kumar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/amitkumar1701/lerna-poc/issues"
+    "url": "https://github.com/skrunchtech/monorepo-poc/issues"
   },
   "devDependencies": {},
   "dependencies": {

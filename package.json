@@ -4,7 +4,7 @@
   "description": "Multiple api in monorepo with lerna and yarn workspaces",
   "repository": {
     "type": "git",
-    "url": "https://github.com/amitkumar1701/lerna-poc"
+    "url": "https://github.com/skrunchtech/monorepo-poc"
   },
   "author": "Amit Kumar",
   "scripts": {
