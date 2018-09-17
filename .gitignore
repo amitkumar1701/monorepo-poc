@@ -47,4 +47,4 @@ translations/workspace.json
 cov
 coverage-it
 .nyc_output/
-docker/database_volume
+packages/roofgraf/docker/database_volume
