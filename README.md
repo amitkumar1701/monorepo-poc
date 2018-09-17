@@ -12,6 +12,8 @@ $ git clone <repo>
 
 ### Running the app
 ```
-read individual read me to run services.
+to run roofgraf in docker: yarn docker:roofgraf
+to run roofgraf locally in dev mode: yarn dev:roofgraf
+to run roofgraf in prod: yarn start:roofgraf
 
 ```

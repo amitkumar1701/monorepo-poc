@@ -8,13 +8,11 @@
   },
   "author": "Amit Kumar",
   "scripts": {
-    "docker:roofgraf": "lerna run --scope roofgraf docker",
-    "docker:roofgraf:stop": "lerna run --scope roofgraf docker-stop",
     "dev:roofgraf": "lerna run --scope roofgraf dev",
     "dev:solargraf": "lerna run --scope solargraf dev",
     "start:roofgraf": "lerna run --scope roofgraf start",
     "start:solargraf": "lerna run --scope solargraf start",
-    "docker-roofgraf": "docker-compose -f docker-compose-dev.yaml up roofgraf_api"
+    "docker:roofgraf": "docker-compose -f docker-compose-dev.yaml up roofgraf_api"
   },
   "license": "ISC",
   "private": true,
