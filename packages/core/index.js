@@ -4,7 +4,6 @@ const Promise = require("bluebird");
 const bcrypt = require("bcrypt");
 const sanitizer = require("sanitizer");
 const sha1 = require("sha1");
-const config = require("config");
 
 const checkPasswordPartOfUsername = (email, password) =>
   !_.includes(email, password)
@@ -66,18 +65,11 @@ const getPersistHash = ({ clientId, key, userId, userAgent }) => {
   return sha1(`${clientId}${key}${userId}${userAgent}${now}`);
 };
 
-const checkClientId = clientId => {
-  if (!clientId || !config.roofgraf.jwt.clientIds.includes(clientId)) {
-    throw Boom.unauthorized("Access denied: Authentication required");
-  }
-};
-
 module.exports = {
   checkPasswordComplexity,
   checkPasswordPreviouslyUsed,
   checkPasswordPartOfUsername,
   checkPasswordLength,
   passwordValidation,
-  getPersistHash,
-  checkClientId
+  getPersistHash
 };

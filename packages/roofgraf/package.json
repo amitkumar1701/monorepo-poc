@@ -1,5 +1,5 @@
 {
-  "name": "roofgraf-api",
+  "name": "roofgraf",
   "version": "1.0.0",
   "description": "Roofgraf API",
   "main": "index.js",
@@ -41,6 +41,7 @@
     "sanitizer": "^0.1.3",
     "sha1": "^1.1.1",
     "swagger-tools": "^0.10.4",
-    "validator": "^10.7.1"
+    "validator": "^10.7.1",
+    "@sofdesk/core":"^1.0.0"
   }
 }

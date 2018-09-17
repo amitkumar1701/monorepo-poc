@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const sanitizer = require("sanitizer");
 const db = require("../helpers/bookshelf");
-const { getPersistHash } = require("../helpers/roofgraf");
+const { getPersistHash } = require("@roofgraf/core");
 
 const appConfig = config.get("roofgraf");
 const debug = require("debug")("models:user_model");

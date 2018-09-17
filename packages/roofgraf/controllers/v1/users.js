@@ -4,9 +4,9 @@ const _ = require("lodash");
 const Boom = require("boom");
 const Promise = require("bluebird");
 const config = require("config");
+const { checkPasswordLength, checkPasswordComplexity, checkPasswordPartOfUsername } = require("@sofdesk/core");
 
 const debug = require("debug")("controllers:roofgraf:users:v1");
-const core = require("core");
 const User = require("../../models/user");
 
 const appConfig = config.get("roofgraf");
@@ -37,9 +37,9 @@ const signup = (req, res, next) => {
     .then(isEmailValid => {
       if (isEmailValid) {
         return Promise.all([
-          core.checkPasswordLength(password),
-          core.checkPasswordComplexity(password),
-          core.checkPasswordPartOfUsername(email, password)
+          checkPasswordLength(password),
+          checkPasswordComplexity(password),
+          checkPasswordPartOfUsername(email, password)
         ]);
       }
       throw Boom.badRequest(
