@@ -4,7 +4,7 @@ const pkg = require("./package.json");
 const bunyan = require("bunyan");
 const server = require("./server.js");
 
-const logger = bunyan.createLogger({ name: "roofgraf" });
+const logger = bunyan.createLogger({ name: "serviceA" });
 
 /**
  * Function for setting up environmental vars

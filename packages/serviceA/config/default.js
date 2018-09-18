@@ -1,16 +1,16 @@
 module.exports = {
-  roofgrafUrl: "http://localhost:5000",
+  serviceAUrl: "http://localhost:5000",
   cors: {
     origin: "*",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE"
   },
-  roofgraf: {
+  serviceA: {
     dbConfig: {
       client: "mysql",
       connection: {
-        host: "localhost",
-        port: "3308",
-        database: "roofgraf_api_db",
+        host: "service-a-database",
+        port: "3306",
+        database: "service_a_api_db",
         user: "root",
         password: "temp4455"
       },

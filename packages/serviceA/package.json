@@ -1,12 +1,13 @@
 {
-  "name": "soofdesk-roofgraf",
+  "name": "service-a",
   "version": "1.0.0",
-  "description": "Roofgraf API",
+  "description": "ServcieA API",
   "main": "index.js",
   "scripts": {
     "build": "exit 0",
     "dev": "DEBUG=* NODE_ENV=dev node startApp.js",
-    "start": "node startApp.js"
+    "start": "node startApp.js",
+    "migrate": "NODE_ENV=dev knex migrate:latest"
   },
   "precommit": [
     "lint"
@@ -37,7 +38,7 @@
     "mysql": "^2.16.0",
     "sanitizer": "^0.1.3",
     "sha1": "^1.1.1",
-    "sofdesk-core": "^1.0.0",
+    "core-package": "^1.0.0",
     "swagger-tools": "^0.10.4",
     "validator": "^10.7.1"
   }

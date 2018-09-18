@@ -4,12 +4,12 @@ const _ = require("lodash");
 const Boom = require("boom");
 const Promise = require("bluebird");
 const config = require("config");
-const { checkPasswordLength, checkPasswordComplexity, checkPasswordPartOfUsername } = require("sofdesk-core");
+const { checkPasswordLength, checkPasswordComplexity, checkPasswordPartOfUsername } = require("core-package");
 
-const debug = require("debug")("controllers:roofgraf:users:v1");
+const debug = require("debug")("controllers:serviceA:users:v1");
 const User = require("../../models/user");
 
-const appConfig = config.get("roofgraf");
+const appConfig = config.get("serviceA");
 
 const signup = (req, res, next) => {
   const payload = req.swagger.params.payload.value;

@@ -2,39 +2,39 @@ version: "3.5"
 
 x-env:
   &env
-  NODE_ENV: "prod"
+  NODE_ENV: "dev"
   LETSENCRYPT_EMAIL: info@skrunch.io
 
 networks:
   webproxy:
 
 services:
-  roofgraf_api:
-    container_name: roofgraf_api
+  service_a_api:
+    container_name: service_a_api
     build:
       context: .
-      dockerfile: ./roofgraf-dev.Dockerfile
+      dockerfile: ./service-a-dev.Dockerfile
       args:
         <<: *env
     ports: 
       - "5000:5000"
     environment:
       <<: *env
-      VIRTUAL_HOST: api2.dev.roofgraf.com
-      LETSENCRYPT_HOST: api2.dev.roofgraf.com
+      VIRTUAL_HOST: api2.dev.service-a.com
+      LETSENCRYPT_HOST: api2.dev.service-a.com
       VIRTUAL_PORT: 5000
-    command: ["yarn", "dev:roofgraf"]
+    command: ["yarn", "dev:serviceA"]
     depends_on:
-      - roofgraf_api_db
+      - service_a_api_db
 
-  roofgraf_api_db:
-    build: ./packages/roofgraf/docker/database/
-    container_name: roofgraf-database
+  service_a_api_db:
+    build: packages/serviceA/docker/database/
+    container_name: service-a-database
     ports:
-     - "3308:3306"
+     - "3306:3306"
     restart: always
     volumes:
-     - ./packages/roofgraf/docker/database_volume:/var/lib/mysql
+     - ./packages/serviceA/docker/database_volume:/var/lib/mysql
 
 networks:
   default:

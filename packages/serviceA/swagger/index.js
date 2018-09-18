@@ -7,8 +7,8 @@ const paths = require("./paths");
 module.exports = {
   swagger: "2.0",
   info: {
-    title: "roofgraf API",
-    description: "Routes supported by roofgraf api",
+    title: "serviceA API",
+    description: "Routes supported by serviceA api",
     version: "1.0.0"
   },
   schemes: ["https", "http"],

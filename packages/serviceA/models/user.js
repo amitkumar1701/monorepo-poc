@@ -7,7 +7,7 @@ const config = require("config");
 const sanitizer = require("sanitizer");
 const db = require("../helpers/bookshelf");
 
-const appConfig = config.get("roofgraf");
+const appConfig = config.get("serviceA");
 const debug = require("debug")("models:user_model");
 const utils = require("../helpers/utils");
 

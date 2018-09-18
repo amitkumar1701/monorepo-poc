@@ -4,7 +4,7 @@ module.exports = {
     required: ["user", "accessToken", "refreshToken"],
     properties: {
       user: {
-        $ref: "#/definitions/v1.roofgraf.user.user"
+        $ref: "#/definitions/v1.serviceA.user.user"
       },
       accessToken: {
         type: "string",

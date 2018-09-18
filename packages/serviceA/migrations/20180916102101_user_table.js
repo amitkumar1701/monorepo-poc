@@ -8,16 +8,9 @@ exports.up = knex =>
     table.string("last_name", 25);
     table.string("role", 50);
     table.boolean("newsletter").defaultTo(0);
-    table
-      .string("email", 100)
-      .unique()
-      .comment("Only one email allowed per user");
+    table.string("email", 100)
     table.string("phone", 11).defaultTo(null);
     table.integer("address").unsigned();
-    table
-      .foreign("address")
-      .references("id")
-      .inTable("address");
     table.dateTime("last_login_date");
     table.string("persist_hash", 100);
     table.boolean("disabled");

@@ -1,4 +1,4 @@
-# Roofgraf API
+# ServiceA API
 
 Make sure you have node version 8+ installed.
 

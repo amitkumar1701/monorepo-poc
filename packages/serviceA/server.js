@@ -6,7 +6,7 @@ const bunyanMiddleware = require("bunyan-middleware");
 
 const conditionalCorsMiddleWare = require("./middlewares/conditionalCors");
 
-const logger = bunyan.createLogger({ name: "roofgraf" });
+const logger = bunyan.createLogger({ name: "serviceA" });
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -51,5 +51,5 @@ swaggerTools.initializeMiddleware(swaggerConfig, middleware => {
   // Start the server
   app.listen(port);
 
-  logger.info(`roofgraf RESTful API server started on: ${port}`);
+  logger.info(`serviceA RESTful API server started on: ${port}`);
 });

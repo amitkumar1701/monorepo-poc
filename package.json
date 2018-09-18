@@ -8,11 +8,10 @@
   },
   "author": "Amit Kumar",
   "scripts": {
-    "dev:roofgraf": "lerna run --scope soofdesk-roofgraf dev",
-    "dev:solargraf": "lerna run --scope solargraf dev",
-    "start:roofgraf": "lerna run --scope roofgraf start",
-    "start:solargraf": "lerna run --scope solargraf start",
-    "docker:roofgraf": "docker-compose -f docker-compose-dev.yaml up roofgraf_api"
+    "dev:serviceA": "lerna run --scope service-a dev",
+    "start:serviceA": "lerna run --scope service-a start",
+    "docker:serviceA": "docker-compose -f docker-compose-dev.yaml up",
+    "migrate:serviceA": "lerna run --scope service-a migrate"
   },
   "license": "ISC",
   "private": true,

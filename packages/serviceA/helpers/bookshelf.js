@@ -1,6 +1,6 @@
 const config = require("config");
 
-const { dbConfig } = config.roofgraf;
+const { dbConfig } = config.serviceA;
 
 const knex = require("knex")(dbConfig);
 const bookshelf = require("bookshelf")(knex);

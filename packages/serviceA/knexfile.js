@@ -1,5 +1,5 @@
 const config = require("config");
 
-const { dbConfig } = config.roofgraf;
+const { dbConfig } = config.serviceA;
 
 module.exports = dbConfig;
