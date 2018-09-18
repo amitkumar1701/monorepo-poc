@@ -1,5 +1,5 @@
 {
-  "name": "solar-poc",
+  "name": "monorepo-poc",
   "version": "1.0.0",
   "description": "Multiple api in monorepo with lerna and yarn workspaces",
   "repository": {
@@ -8,7 +8,7 @@
   },
   "author": "Amit Kumar",
   "scripts": {
-    "dev:roofgraf": "lerna run --scope roofgraf dev",
+    "dev:roofgraf": "lerna --scope roofgraf run dev",
     "dev:solargraf": "lerna run --scope solargraf dev",
     "start:roofgraf": "lerna run --scope roofgraf start",
     "start:solargraf": "lerna run --scope solargraf start",

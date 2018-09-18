@@ -1,11 +1,11 @@
 /* eslint-disable max-lines */
+const _ = require("lodash");
 const Boom = require("boom");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 const sanitizer = require("sanitizer");
 const db = require("../helpers/bookshelf");
-const { getPersistHash } = require("@roofgraf/core");
 
 const appConfig = config.get("roofgraf");
 const debug = require("debug")("models:user_model");
@@ -34,11 +34,6 @@ const User = db.Model.extend(
     }
   },
   {
-    setPersistHash: (userId, userAgent, clientId) => {
-      const hash = getPersistHash(clientId, pbConfig.key, userId, userAgent);
-      return User.updateUserWithId(userId, { persist_hash: hash });
-    },
-
     generateAuthenticatedUser: (userModel, host, params = {}) => {
       const user = {
         id: userModel.get("id"),
@@ -63,7 +58,7 @@ const User = db.Model.extend(
       };
     },
 
-    createUser: ({ email, password }) => {
+    createUser: ({ email, password, host }) => {
       const sanitizedEmail = sanitizer.sanitize(email);
       debug("create new user for with email %s", email);
       const now = utils.getNow();
@@ -74,11 +69,11 @@ const User = db.Model.extend(
           password: passwordHash,
           created_at: now,
           updated_at: now,
-          disable: 0
+          disabled: 0
         };
         return new User(params).save()
       })
-      .then(() => User.generateAuthenticatedUser(userModel, host))
+      .then((userModel) => User.generateAuthenticatedUser(userModel, host))
         .catch(error => {
           const userModelNotFound = error instanceof User.NotFoundError;
           if (userModelNotFound) {

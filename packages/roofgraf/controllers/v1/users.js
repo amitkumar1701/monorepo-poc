@@ -4,7 +4,7 @@ const _ = require("lodash");
 const Boom = require("boom");
 const Promise = require("bluebird");
 const config = require("config");
-const { checkPasswordLength, checkPasswordComplexity, checkPasswordPartOfUsername } = require("@sofdesk/core");
+const { checkPasswordLength, checkPasswordComplexity, checkPasswordPartOfUsername } = require("sofdesk-core");
 
 const debug = require("debug")("controllers:roofgraf:users:v1");
 const User = require("../../models/user");
@@ -47,21 +47,8 @@ const signup = (req, res, next) => {
         [{ code: "email_invalid_format" }]
       );
     })
-    .tap(user => {
-      User.setPersistHash({ userId: user.get("id"), userAgent, clientId });
-    })
-    .then(() => {
-      if (_.includes(appConfig.jwt.clientIds, clientId)) {
-        return User.login({
-          email,
-          password,
-          host
-        });
-      }
-
-      throw Boom.unauthorized("Access denied: Authentication required");
-    })
-    .then(loginResponse => res.json(loginResponse))
+    .then(() => User.createUser({ email, password, host }))
+    .then(response => res.json(response))
     .catch(next);
 };
 

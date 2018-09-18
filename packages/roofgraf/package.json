@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "exit 0",
-    "dev": "DEBUG=* NODE_ENV=dev nodemon startApp.js | bunyan",
-    "docker": "docker-compose -f docker-compose-dev.yaml up",
-    "docker-stop": "docker-compose -f docker-compose-dev.yaml stop",
+    "dev": "DEBUG=* NODE_ENV=dev startApp.js | bunyan",
     "start": "node startApp.js"
   },
   "precommit": [
@@ -37,11 +35,10 @@
     "knex": "^0.15.2",
     "lodash": "^4.17.11",
     "mysql": "^2.16.0",
-    "nodemon": "^1.18.4",
     "sanitizer": "^0.1.3",
     "sha1": "^1.1.1",
+    "sofdesk-core": "^1.0.0",
     "swagger-tools": "^0.10.4",
-    "validator": "^10.7.1",
-    "@sofdesk/core":"^1.0.0"
+    "validator": "^10.7.1"
   }
 }

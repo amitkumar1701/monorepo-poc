@@ -1,5 +1,5 @@
 {
-  "name": "@sofdesk/core",
+  "name": "sofdesk-core",
   "version": "1.0.0",
   "description": "Core helper functions that can be shared among apis",
   "main": "index.js",
