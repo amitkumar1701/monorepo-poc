@@ -1,4 +1,4 @@
-# sofdesk-services
+# multiple-services
 
 Test to organize services under monorepo
 
