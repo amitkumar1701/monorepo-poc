@@ -1,11 +1,11 @@
 {
-  "name": "roofgraf",
+  "name": "soofdesk-roofgraf",
   "version": "1.0.0",
   "description": "Roofgraf API",
   "main": "index.js",
   "scripts": {
     "build": "exit 0",
-    "dev": "DEBUG=* NODE_ENV=dev startApp.js | bunyan",
+    "dev": "DEBUG=* NODE_ENV=dev node startApp.js",
     "start": "node startApp.js"
   },
   "precommit": [

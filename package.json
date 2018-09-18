@@ -8,7 +8,7 @@
   },
   "author": "Amit Kumar",
   "scripts": {
-    "dev:roofgraf": "lerna --scope roofgraf run dev",
+    "dev:roofgraf": "lerna run --scope soofdesk-roofgraf dev",
     "dev:solargraf": "lerna run --scope solargraf dev",
     "start:roofgraf": "lerna run --scope roofgraf start",
     "start:solargraf": "lerna run --scope solargraf start",
